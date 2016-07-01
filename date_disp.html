@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<style>
+		
+		</style>
+		<script>
+
+		function disp() 
+		{
+	
+			var date =new Date();
+			var morning= "AM";
+
+		if(date.getHours()>=12) 
+		{
+			var hours = date.getHours()-12;
+			var morning="PM";
+		}
+
+document.getElementById("dat").innerHTML=date.getMonth()+" - "+date.getDate()+" - "+ date.getFullYear() +" "+date.getHours()+
+":"+date.getMinutes()+" : "+date.getSeconds()+" "+morning;
+
+	
+	
+	}	
+
+			setInterval("disp()",1000);
+		
+		</script>
+	</head>
+	<body>
+	<div id="dat" style="float:left; width:250px; height:50px;background: black; color: white; font-size:22px; text-align:center;line-height:50px;"></div>
+		
+	</body>
+</html>
